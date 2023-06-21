@@ -1,0 +1,127 @@
+# Made in ergogen v4.0.2
+
+units:
+  kx: 18
+  ky: 17
+  px: kx
+  py: ky
+points:
+  key:
+    spread: 18
+    padding: cy
+    footprints:
+      choc:
+        type: choc
+        params:
+          reverse: true
+          keycaps: true
+        nets:
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+      diode:
+        type: diode
+        rotate: 90
+        nets:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        anchor:
+          shift: [0, -5]
+  zones:
+    matrix:
+      columns:
+        outer:
+          key:
+            column_net: P14
+        pinky:
+          key:
+            column_net: P16
+        ring:
+          key:
+            column_net: P10
+        middle:
+          key:
+            column_net: P5
+        index:
+          key:
+            column_net: P6
+        inner:
+          key:
+            column_net: P7
+        extraInner:
+          key:
+            skip: true
+            column_net: P9
+          rows:
+            mod.skip: false
+
+      rows:
+        mod:
+          row_net: P15
+        bottom:
+          row_net: P18
+        home:
+          row_net: P19
+        top:
+          row_net: P20
+        num:
+          row_net: P21
+
+outlines:
+  raw:
+    - what: rectangle
+      corner: 2
+      size: [7.1*cx, 5*cy]
+      where:
+        shift: [55,0]
+        ref: matrix_outer_home
+pcbs:
+  choc_swirl:
+    outlines:
+      main:
+        outline: raw
+    footprints:
+      choc:
+        what: choc
+        where: true
+        params:
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+          keycaps: true
+          reverse: true
+      diode:
+        what: diode
+        where: true
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          shift: [0, -5]
+      promicro:
+        what: promicro_pretty
+        where:
+          ref: matrix_inner_num
+          shift: [19, -10.5]
+          rotate: -90
+
+      trrs:
+        what: trrs
+        where:
+          ref: matrix_inner_home
+          shift: [28, -2]
+          rotate: -90
+        params:
+          A: GND
+          B: GND
+          C: P8
+          D: VCC
+          reverse: true
+
+      reset_button:
+        what: reset_switch
+        where:
+          ref: matrix_inner_home
+          shift: [24, -8]
+          rotate: 180
+        params:
+          from: RST
+          to: GND
