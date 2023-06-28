@@ -1,6 +1,8 @@
 # Swirl
 A helix (haha...swirl...kinda helixy?) like board with choc spacing and dual thumb roller encoders
 
+![image](https://github.com/vmorganp/swirl/assets/31448722/9350e84f-a610-44ec-b03f-c2fa4a79058a)
+
 # Credits
 @mrzealot and the other maintainers of ergogen
 
