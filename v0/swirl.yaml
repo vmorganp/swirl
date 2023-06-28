@@ -1,70 +1,71 @@
-# Made in ergogen v4.0.2
-
+# made in ergogen v4.0.4
 units:
   kx: 18
   ky: 17
   px: kx
   py: ky
+
 points:
   key:
     spread: 18
     padding: cy
-    footprints:
-      choc:
-        type: choc
-        params:
-          reverse: true
-          keycaps: true
-        nets:
-          from: "{{column_net}}"
-          to: "{{colrow}}"
-      diode:
-        type: diode
-        rotate: 90
-        nets:
-          from: "{{colrow}}"
-          to: "{{row_net}}"
-        anchor:
-          shift: [0, -5]
+    # footprints:
+    #   choc:
+    #     type: choc
+    #     params:
+    #       reverse: true
+    #       keycaps: true
+    #     nets:
+    #       from: "{{colrow}}"
+    #       to: "{{column_net}}"
+    #   diode:
+    #     type: diode
+    #     rotate: 90
+    #     nets:
+    #       from: "{{colrow}}"
+    #       to: "{{row_net}}"
+    #     anchor:
+    #       shift: [0, -5]
+
   zones:
     matrix:
       columns:
         outer:
           key:
-            column_net: P14
+            column_net: P21
         pinky:
           key:
-            column_net: P16
+            column_net: P20
         ring:
           key:
-            column_net: P10
+            column_net: P19
         middle:
           key:
-            column_net: P5
+            column_net: P18
         index:
           key:
-            column_net: P6
+            column_net: SCLK
         inner:
           key:
-            column_net: P7
+            column_net: MISO
         extraInner:
           key:
             skip: true
-            column_net: P9
+            column_net: MOSI
           rows:
             mod.skip: false
 
       rows:
         mod:
-          row_net: P15
+          row_net: P8
         bottom:
-          row_net: P18
+          row_net: P7
         home:
-          row_net: P19
+          row_net: P6
         top:
-          row_net: P20
+          row_net: P5
         num:
-          row_net: P21
+          row_net: P4
 
 outlines:
   raw:
@@ -74,8 +75,9 @@ outlines:
       where:
         shift: [55,0]
         ref: matrix_outer_home
+
 pcbs:
-  choc_swirl:
+  main:
     outlines:
       main:
         outline: raw
@@ -88,6 +90,7 @@ pcbs:
           to: "{{colrow}}"
           keycaps: true
           reverse: true
+
       diode:
         what: diode
         where: true
@@ -96,12 +99,15 @@ pcbs:
           to: "{{row_net}}"
         adjust:
           shift: [0, -5]
+
       promicro:
         what: promicro_pretty
         where:
           ref: matrix_inner_num
-          shift: [19, -10.5]
+          shift: [18.5, -10.5]
           rotate: -90
+        # params:
+          # orientation: up
 
       trrs:
         what: trrs
@@ -112,7 +118,7 @@ pcbs:
         params:
           A: GND
           B: GND
-          C: P8
+          C: P10
           D: VCC
           reverse: true
 
@@ -120,7 +126,7 @@ pcbs:
         what: reset_switch
         where:
           ref: matrix_inner_home
-          shift: [24, -8]
+          shift: [20, -8]
           rotate: 180
         params:
           from: RST
