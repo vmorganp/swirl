@@ -3,14 +3,14 @@
     "GenerationSoftware": {
       "Vendor": "KiCad",
       "Application": "Pcbnew",
-      "Version": "6.0.2+dfsg-1"
+      "Version": "6.0.11-2627ca5db0~126~ubuntu22.04.1"
     },
-    "CreationDate": "2023-06-27T17:47:54-07:00"
+    "CreationDate": "2023-06-28T22:42:21-07:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
-      "Name": "swirlComplete",
-      "GUID": "73776972-6c43-46f6-9d70-6c6574652e6b",
+      "Name": "swirl",
+      "GUID": "73776972-6c2e-46b6-9963-61645f706362",
       "Revision": "v1.0.0"
     },
     "Size": {
@@ -32,47 +32,47 @@
   ],
   "FilesAttributes": [
     {
-      "Path": "swirlComplete-F_Cu.gbr",
+      "Path": "swirl-F_Cu.gbr",
       "FileFunction": "Copper,L1,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "swirlComplete-B_Cu.gbr",
+      "Path": "swirl-B_Cu.gbr",
       "FileFunction": "Copper,L2,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "swirlComplete-F_Paste.gbr",
+      "Path": "swirl-F_Paste.gbr",
       "FileFunction": "SolderPaste,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "swirlComplete-B_Paste.gbr",
+      "Path": "swirl-B_Paste.gbr",
       "FileFunction": "SolderPaste,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "swirlComplete-F_Silkscreen.gbr",
+      "Path": "swirl-F_Silkscreen.gbr",
       "FileFunction": "Legend,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "swirlComplete-B_Silkscreen.gbr",
+      "Path": "swirl-B_Silkscreen.gbr",
       "FileFunction": "Legend,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "swirlComplete-F_Mask.gbr",
+      "Path": "swirl-F_Mask.gbr",
       "FileFunction": "SolderMask,Top",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "swirlComplete-B_Mask.gbr",
+      "Path": "swirl-B_Mask.gbr",
       "FileFunction": "SolderMask,Bot",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "swirlComplete-Edge_Cuts.gbr",
+      "Path": "swirl-Edge_Cuts.gbr",
       "FileFunction": "Profile",
       "FilePolarity": "Positive"
     }
