@@ -118,7 +118,7 @@ pcbs:
         params:
           A: GND
           B: GND
-          C: P10
+          C: P0
           D: VCC
           reverse: true
 
