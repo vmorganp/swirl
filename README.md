@@ -55,3 +55,4 @@ Prerequisites
 
 @imstubtw (i think) for the tutorial at https://flatfootfox.com/ergogen-part4-footprints-cases/
 
+@aejay for the "swirl" text graphic [here](./graphics/swirl_text.svg)
