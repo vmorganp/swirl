@@ -113,7 +113,7 @@ pcbs:
         what: trrs
         where:
           ref: matrix_inner_home
-          shift: [28, -2]
+          shift: [28, 1]
           rotate: -90
         params:
           A: GND
@@ -126,8 +126,27 @@ pcbs:
         what: reset_switch
         where:
           ref: matrix_inner_home
-          shift: [20, -8]
+          shift: [20, -5]
           rotate: 180
         params:
           from: RST
           to: GND
+
+      # encoder:
+      #   what: the rotary encoder in the footprints folder
+      #   where: above the inner key but not too close
+      #   A = p10
+      #   B = p1
+      #   C = SDA
+      #   D = P9
+      #   E = GND
+      #
+      #############################
+      # cursed ascii encoder pinout
+      #############################
+      #
+      #   A  B
+      #     C
+      #     D
+      #     E
+
