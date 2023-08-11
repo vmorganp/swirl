@@ -3,6 +3,12 @@ A Split keyboard with a thumb encoder on either side heavily inspired by the [he
 
 ![image](https://github.com/vmorganp/swirl/assets/31448722/9350e84f-a610-44ec-b03f-c2fa4a79058a)
 
+# ToDo
+- diconnect the 2 pairs of inner pins on the trrs jack. both being ground causes a short circuit and requires modification of the TRRS jack at this time
+    - I'm pretty sure there's something i2c related with this that you're *supposed* to do, but I don't actually understand that.
+- Get the button part of the encoder in the appropriate col/row rather than being it's own direct connect key which is poorly supported in qmk
+
+
 # Build Guide
 ## Ingredients
 - 2x PCBs (Upload the zip from [here](./v0/ergogen_output/gerber.zip) to https://jlcpcb.com/ (the minimum order quantity is 5, maybe get six and share with a couple friends?)
@@ -32,7 +38,7 @@ Prerequisites
 1. clone my qmk fork (maybe we get this merged into upstream at some point??)
 `git clone git@github.com:vmorganp/qmk_firmware.git`
 
-1. Compile and flash the firmware
+1. Compile and flash the firmware. (The default firmware is NOT good and I highly recommend creating your own)
     - Assuming you're using an elite-pi, compile the firmware using:
         1. qmk compile -kb swirl -km default -e CONVERT_TO=elite_pi`
         1. Drag and drop the compiled <filename>.uf2 file onto the pi
