@@ -1,7 +1,8 @@
 # Swirl
 A Split keyboard with a thumb encoder on either side heavily inspired by the [helix](https://github.com/MakotoKurauchi/helix)
 
-![image](https://github.com/vmorganp/swirl/assets/31448722/9350e84f-a610-44ec-b03f-c2fa4a79058a)
+![20230909_151407](https://github.com/vmorganp/swirl/assets/31448722/cb489bbf-dfa5-403c-a70c-b15b2626e172)
+
 
 # ToDo
 - diconnect the 2 pairs of inner pins on the trrs jack. both being ground causes a short circuit and requires modification of the TRRS jack at this time
